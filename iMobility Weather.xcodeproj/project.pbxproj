@@ -16,6 +16,13 @@
 		F4761A1023A9003E0014CF52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4761A0D23A9003E0014CF52 /* Assets.xcassets */; };
 		F4761A1123A9003E0014CF52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4761A0E23A9003E0014CF52 /* LaunchScreen.storyboard */; };
 		F4761A1523A90F270014CF52 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A1423A90F270014CF52 /* Error.swift */; };
+		F4761A1B23A90F660014CF52 /* ModelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A1723A90F660014CF52 /* ModelService.swift */; };
+		F4761A1E23A90F660014CF52 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A1A23A90F660014CF52 /* Model.swift */; };
+		F4761A2023A910100014CF52 /* ModelServiceWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A1F23A910100014CF52 /* ModelServiceWeather.swift */; };
+		F4761A2223A9101E0014CF52 /* ModelServiceWeatherList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A2123A9101E0014CF52 /* ModelServiceWeatherList.swift */; };
+		F4761A2423A910660014CF52 /* ModelServiceCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A2323A910660014CF52 /* ModelServiceCommon.swift */; };
+		F4761A2823A91A5D0014CF52 /* ModelServiceForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A2723A91A5D0014CF52 /* ModelServiceForecast.swift */; };
+		F4761A2A23A91ABC0014CF52 /* ModelServiceForecastList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A2923A91ABC0014CF52 /* ModelServiceForecastList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +62,13 @@
 		F4761A0D23A9003E0014CF52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4761A0F23A9003E0014CF52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4761A1423A90F270014CF52 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		F4761A1723A90F660014CF52 /* ModelService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelService.swift; sourceTree = "<group>"; };
+		F4761A1A23A90F660014CF52 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = "iMobility Weather/Model/Model.swift"; sourceTree = SOURCE_ROOT; };
+		F4761A1F23A910100014CF52 /* ModelServiceWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelServiceWeather.swift; sourceTree = "<group>"; };
+		F4761A2123A9101E0014CF52 /* ModelServiceWeatherList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelServiceWeatherList.swift; sourceTree = "<group>"; };
+		F4761A2323A910660014CF52 /* ModelServiceCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelServiceCommon.swift; sourceTree = "<group>"; };
+		F4761A2723A91A5D0014CF52 /* ModelServiceForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelServiceForecast.swift; sourceTree = "<group>"; };
+		F4761A2923A91ABC0014CF52 /* ModelServiceForecastList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelServiceForecastList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +106,6 @@
 				2204E90B43D4115523E7ABFD /* Pods-iMobility WeatherTests.debug.xcconfig */,
 				47091B83770A103B77B13E8B /* Pods-iMobility WeatherTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -193,6 +206,8 @@
 		F4761A1223A90F270014CF52 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F4761A1A23A90F660014CF52 /* Model.swift */,
+				F4761A1623A90F660014CF52 /* Service */,
 				F4761A1323A90F270014CF52 /* Error */,
 			);
 			path = Model;
@@ -204,6 +219,36 @@
 				F4761A1423A90F270014CF52 /* Error.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		F4761A1623A90F660014CF52 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F4761A1723A90F660014CF52 /* ModelService.swift */,
+				F4761A2323A910660014CF52 /* ModelServiceCommon.swift */,
+				F4761A2523A91A430014CF52 /* Weather */,
+				F4761A2623A91A4C0014CF52 /* Forecast */,
+			);
+			name = Service;
+			path = "iMobility Weather/Model/Service";
+			sourceTree = SOURCE_ROOT;
+		};
+		F4761A2523A91A430014CF52 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				F4761A1F23A910100014CF52 /* ModelServiceWeather.swift */,
+				F4761A2123A9101E0014CF52 /* ModelServiceWeatherList.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		F4761A2623A91A4C0014CF52 /* Forecast */ = {
+			isa = PBXGroup;
+			children = (
+				F4761A2723A91A5D0014CF52 /* ModelServiceForecast.swift */,
+				F4761A2923A91ABC0014CF52 /* ModelServiceForecastList.swift */,
+			);
+			path = Forecast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,9 +466,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4761A1E23A90F660014CF52 /* Model.swift in Sources */,
 				F417601323A8FEE3006EF781 /* AppDelegate.swift in Sources */,
 				F4761A1523A90F270014CF52 /* Error.swift in Sources */,
 				F417601523A8FEE3006EF781 /* SceneDelegate.swift in Sources */,
+				F4761A2223A9101E0014CF52 /* ModelServiceWeatherList.swift in Sources */,
+				F4761A2423A910660014CF52 /* ModelServiceCommon.swift in Sources */,
+				F4761A2023A910100014CF52 /* ModelServiceWeather.swift in Sources */,
+				F4761A1B23A90F660014CF52 /* ModelService.swift in Sources */,
+				F4761A2A23A91ABC0014CF52 /* ModelServiceForecastList.swift in Sources */,
+				F4761A2823A91A5D0014CF52 /* ModelServiceForecast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
