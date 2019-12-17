@@ -24,6 +24,7 @@
 		F4761A2823A91A5D0014CF52 /* ModelServiceForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A2723A91A5D0014CF52 /* ModelServiceForecast.swift */; };
 		F4761A2A23A91ABC0014CF52 /* ModelServiceForecastList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A2923A91ABC0014CF52 /* ModelServiceForecastList.swift */; };
 		F4761A2D23A91B5E0014CF52 /* NetworkEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A2C23A91B5E0014CF52 /* NetworkEngine.swift */; };
+		F4761A2F23A91FBE0014CF52 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A2E23A91FBE0014CF52 /* DataLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		F4761A2723A91A5D0014CF52 /* ModelServiceForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelServiceForecast.swift; sourceTree = "<group>"; };
 		F4761A2923A91ABC0014CF52 /* ModelServiceForecastList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelServiceForecastList.swift; sourceTree = "<group>"; };
 		F4761A2C23A91B5E0014CF52 /* NetworkEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEngine.swift; sourceTree = "<group>"; };
+		F4761A2E23A91FBE0014CF52 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +259,7 @@
 		F4761A2B23A91B5E0014CF52 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F4761A2E23A91FBE0014CF52 /* DataLoader.swift */,
 				F4761A2C23A91B5E0014CF52 /* NetworkEngine.swift */,
 			);
 			path = Services;
@@ -485,6 +488,7 @@
 				F4761A2223A9101E0014CF52 /* ModelServiceWeatherList.swift in Sources */,
 				F4761A2423A910660014CF52 /* ModelServiceCommon.swift in Sources */,
 				F4761A2023A910100014CF52 /* ModelServiceWeather.swift in Sources */,
+				F4761A2F23A91FBE0014CF52 /* DataLoader.swift in Sources */,
 				F4761A1B23A90F660014CF52 /* ModelService.swift in Sources */,
 				F4761A2A23A91ABC0014CF52 /* ModelServiceForecastList.swift in Sources */,
 				F4761A2823A91A5D0014CF52 /* ModelServiceForecast.swift in Sources */,
