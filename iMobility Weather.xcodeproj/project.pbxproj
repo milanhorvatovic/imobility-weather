@@ -23,6 +23,7 @@
 		F4761A2423A910660014CF52 /* ModelServiceCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A2323A910660014CF52 /* ModelServiceCommon.swift */; };
 		F4761A2823A91A5D0014CF52 /* ModelServiceForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A2723A91A5D0014CF52 /* ModelServiceForecast.swift */; };
 		F4761A2A23A91ABC0014CF52 /* ModelServiceForecastList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A2923A91ABC0014CF52 /* ModelServiceForecastList.swift */; };
+		F4761A2D23A91B5E0014CF52 /* NetworkEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A2C23A91B5E0014CF52 /* NetworkEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		F4761A2323A910660014CF52 /* ModelServiceCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelServiceCommon.swift; sourceTree = "<group>"; };
 		F4761A2723A91A5D0014CF52 /* ModelServiceForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelServiceForecast.swift; sourceTree = "<group>"; };
 		F4761A2923A91ABC0014CF52 /* ModelServiceForecastList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelServiceForecastList.swift; sourceTree = "<group>"; };
+		F4761A2C23A91B5E0014CF52 /* NetworkEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			children = (
 				F417604223A8FF1C006EF781 /* Application */,
 				F4761A1223A90F270014CF52 /* Model */,
+				F4761A2B23A91B5E0014CF52 /* Services */,
 				F4761A0C23A9003E0014CF52 /* Resources */,
 				F417604523A8FF41006EF781 /* Supporting files */,
 			);
@@ -249,6 +252,14 @@
 				F4761A2923A91ABC0014CF52 /* ModelServiceForecastList.swift */,
 			);
 			path = Forecast;
+			sourceTree = "<group>";
+		};
+		F4761A2B23A91B5E0014CF52 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F4761A2C23A91B5E0014CF52 /* NetworkEngine.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,6 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4761A2D23A91B5E0014CF52 /* NetworkEngine.swift in Sources */,
 				F4761A1E23A90F660014CF52 /* Model.swift in Sources */,
 				F417601323A8FEE3006EF781 /* AppDelegate.swift in Sources */,
 				F4761A1523A90F270014CF52 /* Error.swift in Sources */,
