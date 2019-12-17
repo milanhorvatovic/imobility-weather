@@ -13,6 +13,7 @@
 		F417601523A8FEE3006EF781 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417601423A8FEE3006EF781 /* SceneDelegate.swift */; };
 		F417602A23A8FEE4006EF781 /* iMobility_WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417602923A8FEE4006EF781 /* iMobility_WeatherTests.swift */; };
 		F417603523A8FEE5006EF781 /* iMobility_WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417603423A8FEE5006EF781 /* iMobility_WeatherUITests.swift */; };
+		F44FB9F423AA328300DEB834 /* DataLoaderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FB9F323AA328300DEB834 /* DataLoaderMock.swift */; };
 		F4761A1023A9003E0014CF52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4761A0D23A9003E0014CF52 /* Assets.xcassets */; };
 		F4761A1123A9003E0014CF52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4761A0E23A9003E0014CF52 /* LaunchScreen.storyboard */; };
 		F4761A1523A90F270014CF52 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A1423A90F270014CF52 /* Error.swift */; };
@@ -25,6 +26,8 @@
 		F4761A2A23A91ABC0014CF52 /* ModelServiceForecastList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A2923A91ABC0014CF52 /* ModelServiceForecastList.swift */; };
 		F4761A2D23A91B5E0014CF52 /* NetworkEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A2C23A91B5E0014CF52 /* NetworkEngine.swift */; };
 		F4761A2F23A91FBE0014CF52 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A2E23A91FBE0014CF52 /* DataLoader.swift */; };
+		F4761A3223A9265A0014CF52 /* DataLoaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A3123A9265A0014CF52 /* DataLoaderTest.swift */; };
+		F4761A3523A927390014CF52 /* NetworkEngineMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A3423A927390014CF52 /* NetworkEngineMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,7 @@
 		F417603023A8FEE5006EF781 /* iMobility WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iMobility WeatherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F417603423A8FEE5006EF781 /* iMobility_WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMobility_WeatherUITests.swift; sourceTree = "<group>"; };
 		F417603623A8FEE5006EF781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F44FB9F323AA328300DEB834 /* DataLoaderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoaderMock.swift; sourceTree = "<group>"; };
 		F4761A0D23A9003E0014CF52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4761A0F23A9003E0014CF52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4761A1423A90F270014CF52 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 		F4761A2923A91ABC0014CF52 /* ModelServiceForecastList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelServiceForecastList.swift; sourceTree = "<group>"; };
 		F4761A2C23A91B5E0014CF52 /* NetworkEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEngine.swift; sourceTree = "<group>"; };
 		F4761A2E23A91FBE0014CF52 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		F4761A3123A9265A0014CF52 /* DataLoaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoaderTest.swift; sourceTree = "<group>"; };
+		F4761A3423A927390014CF52 /* NetworkEngineMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEngineMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +165,8 @@
 		F417602823A8FEE4006EF781 /* iMobility WeatherTests */ = {
 			isa = PBXGroup;
 			children = (
+				F4761A3323A9272C0014CF52 /* Mock */,
+				F4761A3023A9264E0014CF52 /* Data */,
 				F417602923A8FEE4006EF781 /* iMobility_WeatherTests.swift */,
 				F417602B23A8FEE4006EF781 /* Info.plist */,
 			);
@@ -263,6 +271,23 @@
 				F4761A2C23A91B5E0014CF52 /* NetworkEngine.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		F4761A3023A9264E0014CF52 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F4761A3123A9265A0014CF52 /* DataLoaderTest.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F4761A3323A9272C0014CF52 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				F4761A3423A927390014CF52 /* NetworkEngineMock.swift */,
+				F44FB9F323AA328300DEB834 /* DataLoaderMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -499,7 +524,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4761A3523A927390014CF52 /* NetworkEngineMock.swift in Sources */,
+				F4761A3223A9265A0014CF52 /* DataLoaderTest.swift in Sources */,
 				F417602A23A8FEE4006EF781 /* iMobility_WeatherTests.swift in Sources */,
+				F44FB9F423AA328300DEB834 /* DataLoaderMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
