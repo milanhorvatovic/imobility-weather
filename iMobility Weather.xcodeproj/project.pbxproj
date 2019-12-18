@@ -14,6 +14,10 @@
 		F417601523A8FEE3006EF781 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417601423A8FEE3006EF781 /* SceneDelegate.swift */; };
 		F417602A23A8FEE4006EF781 /* iMobility_WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417602923A8FEE4006EF781 /* iMobility_WeatherTests.swift */; };
 		F417603523A8FEE5006EF781 /* iMobility_WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417603423A8FEE5006EF781 /* iMobility_WeatherUITests.swift */; };
+		F44FB9F423AA328300DEB834 /* DataLoaderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FB9F323AA328300DEB834 /* DataLoaderMock.swift */; };
+		F44FB9E723AA210600DEB834 /* ModelContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FB9E623AA210600DEB834 /* ModelContent.swift */; };
+		F44FB9E923AA215800DEB834 /* ModelContentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FB9E823AA215800DEB834 /* ModelContentWeather.swift */; };
+		F44FB9EB23AA21F400DEB834 /* ModelContentForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FB9EA23AA21F400DEB834 /* ModelContentForecast.swift */; };
 		F44FB9EE23AA238000DEB834 /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FB9ED23AA238000DEB834 /* Predicate.swift */; };
 		F44FB9F023AA238800DEB834 /* SortDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FB9EF23AA238800DEB834 /* SortDescriptor.swift */; };
 		F44FB9F423AA328300DEB834 /* DataLoaderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FB9F323AA328300DEB834 /* DataLoaderMock.swift */; };
@@ -68,6 +72,10 @@
 		F417603023A8FEE5006EF781 /* iMobility WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iMobility WeatherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F417603423A8FEE5006EF781 /* iMobility_WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMobility_WeatherUITests.swift; sourceTree = "<group>"; };
 		F417603623A8FEE5006EF781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F44FB9F323AA328300DEB834 /* DataLoaderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoaderMock.swift; sourceTree = "<group>"; };
+		F44FB9E623AA210600DEB834 /* ModelContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContent.swift; sourceTree = "<group>"; };
+		F44FB9E823AA215800DEB834 /* ModelContentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContentWeather.swift; sourceTree = "<group>"; };
+		F44FB9EA23AA21F400DEB834 /* ModelContentForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContentForecast.swift; sourceTree = "<group>"; };
 		F44FB9ED23AA238000DEB834 /* Predicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predicate.swift; sourceTree = "<group>"; };
 		F44FB9EF23AA238800DEB834 /* SortDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortDescriptor.swift; sourceTree = "<group>"; };
 		F44FB9F323AA328300DEB834 /* DataLoaderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoaderMock.swift; sourceTree = "<group>"; };
@@ -214,6 +222,16 @@
 			path = "Supporting files";
 			sourceTree = "<group>";
 		};
+		F44FB9E523AA20F600DEB834 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				F44FB9E623AA210600DEB834 /* ModelContent.swift */,
+				F44FB9E823AA215800DEB834 /* ModelContentWeather.swift */,
+				F44FB9EA23AA21F400DEB834 /* ModelContentForecast.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 		F44FB9EC23AA238000DEB834 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +256,7 @@
 			children = (
 				F4761A1A23A90F660014CF52 /* Model.swift */,
 				F4761A1623A90F660014CF52 /* Service */,
+				F44FB9E523AA20F600DEB834 /* Content */,
 				F4761A1323A90F270014CF52 /* Error */,
 			);
 			path = Model;
@@ -530,9 +549,12 @@
 				F417601523A8FEE3006EF781 /* SceneDelegate.swift in Sources */,
 				F4761A2223A9101E0014CF52 /* ModelServiceWeatherList.swift in Sources */,
 				F4761A2423A910660014CF52 /* ModelServiceCommon.swift in Sources */,
+				F44FB9E723AA210600DEB834 /* ModelContent.swift in Sources */,
+				F44FB9EB23AA21F400DEB834 /* ModelContentForecast.swift in Sources */,
 				F44FB9EE23AA238000DEB834 /* Predicate.swift in Sources */,
 				F4761A2023A910100014CF52 /* ModelServiceWeather.swift in Sources */,
 				F4761A2F23A91FBE0014CF52 /* DataLoader.swift in Sources */,
+				F44FB9E923AA215800DEB834 /* ModelContentWeather.swift in Sources */,
 				F4761A1B23A90F660014CF52 /* ModelService.swift in Sources */,
 				F44FB9F023AA238800DEB834 /* SortDescriptor.swift in Sources */,
 				F4761A2A23A91ABC0014CF52 /* ModelServiceForecastList.swift in Sources */,
