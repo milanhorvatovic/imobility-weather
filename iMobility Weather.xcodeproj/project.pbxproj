@@ -22,6 +22,7 @@
 		F44FB9EE23AA238000DEB834 /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FB9ED23AA238000DEB834 /* Predicate.swift */; };
 		F44FB9F023AA238800DEB834 /* SortDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FB9EF23AA238800DEB834 /* SortDescriptor.swift */; };
 		F44FB9F423AA328300DEB834 /* DataLoaderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FB9F323AA328300DEB834 /* DataLoaderMock.swift */; };
+		F44FB9F223AA314900DEB834 /* DataProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FB9F123AA314900DEB834 /* DataProviderTest.swift */; };
 		F4761A1023A9003E0014CF52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4761A0D23A9003E0014CF52 /* Assets.xcassets */; };
 		F4761A1123A9003E0014CF52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4761A0E23A9003E0014CF52 /* LaunchScreen.storyboard */; };
 		F4761A1523A90F270014CF52 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4761A1423A90F270014CF52 /* Error.swift */; };
@@ -81,6 +82,7 @@
 		F44FB9ED23AA238000DEB834 /* Predicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predicate.swift; sourceTree = "<group>"; };
 		F44FB9EF23AA238800DEB834 /* SortDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortDescriptor.swift; sourceTree = "<group>"; };
 		F44FB9F323AA328300DEB834 /* DataLoaderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoaderMock.swift; sourceTree = "<group>"; };
+		F44FB9F123AA314900DEB834 /* DataProviderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderTest.swift; sourceTree = "<group>"; };
 		F4761A0D23A9003E0014CF52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4761A0F23A9003E0014CF52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4761A1423A90F270014CF52 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				F4761A3123A9265A0014CF52 /* DataLoaderTest.swift */,
+				F44FB9F123AA314900DEB834 /* DataProviderTest.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 			files = (
 				F4761A3523A927390014CF52 /* NetworkEngineMock.swift in Sources */,
 				F4761A3223A9265A0014CF52 /* DataLoaderTest.swift in Sources */,
+				F44FB9F223AA314900DEB834 /* DataProviderTest.swift in Sources */,
 				F417602A23A8FEE4006EF781 /* iMobility_WeatherTests.swift in Sources */,
 				F44FB9F423AA328300DEB834 /* DataLoaderMock.swift in Sources */,
 			);
