@@ -1,12 +1,12 @@
 //
-//  ListViewController.swift
+//  DetailViewController.swift
 //  iMobility Weather
 //
-//  Created by worker on 18/12/2019.
+//  Created by Milan Horvatovic on 18/12/2019.
 //  Copyright © 2019 Milan Horvatovic. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 import Strongify
 import RxSwift
@@ -15,15 +15,26 @@ import RxDataSources
 import RxSwiftExt
 import RxOptional
 
-final class ListViewController: UIViewController {
+final class DetailViewController: UIViewController {
     
-    typealias ViewModelType = ListViewModel
+    typealias ViewModelType = DetailViewModel
     
-    private static let _cellIdentifier: String = "ListCellIdentifier"
+    private static let _cellIdentifier: String = "DetailCellIdentifier"
+    
+    private static let _dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.locale = Locale.current
+        formatter.dateStyle = .full
+        formatter.timeStyle = .none
+        return formatter
+    }()
     
     private let _viewModel: ViewModelType
     private var _disposeBag = DisposeBag()
     
+    private lazy var _headerView: DetailHeaderView = self._createHeaderView()
+    private lazy var _separatorHorizontalView: UIView = self._createSeparator()
+    private lazy var _separatorVerticalView: UIView = self._createSeparator()
     private lazy var _tableView: UITableView = self._createTableView()
     private lazy var _pullToRefresh: UIRefreshControl = self._createPullToRefresh()
     
@@ -56,18 +67,32 @@ final class ListViewController: UIViewController {
             .bind(to: self._viewModel.fetchAction)
             .disposed(by: self._disposeBag)
         
-        let dataSource = RxTableViewSectionedAnimatedDataSource<ListSection>(
+        self._viewModel.weatherData
+            .subscribe(onNext: strongify(weak: self,
+                                         closure: { (self, weather) in
+                                            self.title = weather.service?.name
+                                            self._headerView.configure(with: weather)
+            }))
+            .disposed(by: self._disposeBag)
+        
+        let dataSource = RxTableViewSectionedAnimatedDataSource<DetailListSection>(
             configureCell: { [unowned self] (dataSource, tableView, indexPath, item) -> UITableViewCell in
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: type(of: self)._cellIdentifier,
-                                                               for: indexPath) as? ListCell
+                                                               for: indexPath) as? DetailCell
                     else {
                         fatalError("Couldn't create custom cell")
                 }
-                cell.configure(with: item.service)
+                cell.configure(with: item)
                 return cell
+            },
+            titleForHeaderInSection: { [unowned self] (dataSource, index) -> String? in
+                guard let timeInterval = Double(dataSource[index].identity) else {
+                    return nil
+                }
+                return type(of: self)._dateFormatter.string(from: Date(timeIntervalSince1970: timeInterval * 86400.0))
         })
         
-        let data = self._viewModel.data
+        let data = self._viewModel.forecastData
             .share(replay: 1,
                    scope: .forever)
         data
@@ -82,14 +107,6 @@ final class ListViewController: UIViewController {
                 .bind(to: backgroundView.rx.alpha)
                 .disposed(by: self._disposeBag)
         }
-        data
-            .filterEmpty()
-            .delay(.seconds(0), scheduler: MainScheduler.asyncInstance)
-            .subscribe(onNext: strongify(weak: self,
-                                         closure: { (self, _) in
-                                            self._tableView.reloadData()
-            }))
-            .disposed(by: self._disposeBag)
         
         self._viewModel.error
             .subscribe(onNext: strongify(weak: self,
@@ -102,25 +119,33 @@ final class ListViewController: UIViewController {
         self._viewModel.isLoading
             .bind(to: self._pullToRefresh.rx.isRefreshing)
             .disposed(by: self._disposeBag)
-        
-        self._tableView.rx.modelSelected(ViewModelType.ModelType.self)
-            .subscribe(onNext: strongify(weak: self,
-                                         closure: { (self, item) in
-                                            self._didSelect(item: item)
-            }))
-            .disposed(by: self._disposeBag)
     }
     
 }
 
-extension ListViewController {
+extension DetailViewController {
+    
+    private func _createHeaderView() -> DetailHeaderView {
+        let view = DetailHeaderView()
+        view.backgroundColor = .clear
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }
+    
+    private func _createSeparator() -> UIView {
+        let view = UIView()
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.45)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }
     
     private func _createTableView() -> UITableView {
         let tableView = UITableView(frame: .zero,
                                     style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .clear
-        tableView.register(ListCell.self,
+        tableView.allowsSelection = false
+        tableView.register(DetailCell.self,
                            forCellReuseIdentifier: type(of: self)._cellIdentifier)
         return tableView
     }
@@ -155,12 +180,15 @@ extension ListViewController {
     
     // MARK: setup UI & autolayout
     private func _setupUI() {
-        self.title = "Cities"
-        
         self.view.backgroundColor = .backgroundColor
         
         self.view.addSubview(self._tableView)
+        
+        self._headerView.addSubview(self._separatorVerticalView)
+        self._headerView.addSubview(self._separatorHorizontalView)
+        
         self._tableView.refreshControl = self._pullToRefresh
+        self._tableView.tableHeaderView = self._headerView
         self._tableView.backgroundView = self._createEmptyBackgroundView()
         self._tableView.tableFooterView = UIView()
         
@@ -170,15 +198,40 @@ extension ListViewController {
     }
     
     private func _setupAutoLayout() {
-        self._tableView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-        self._tableView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-        self._tableView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        self._tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        if #available(iOS 11.0, *) {
+            let viewGuide = self.view.safeAreaLayoutGuide
+            self._tableView.leftAnchor.constraint(equalTo: viewGuide.leftAnchor).isActive = true
+            self._tableView.rightAnchor.constraint(equalTo: viewGuide.rightAnchor).isActive = true
+            self._tableView.topAnchor.constraint(equalTo: viewGuide.topAnchor).isActive = true
+            self._tableView.bottomAnchor.constraint(equalTo: viewGuide.bottomAnchor).isActive = true
+        }
+        else {
+            self._tableView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+            self._tableView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+            self._tableView.topAnchor.constraint(equalTo: self.topLayoutGuide.topAnchor).isActive = true
+            self._tableView.bottomAnchor.constraint(equalTo: self.bottomLayoutGuide.bottomAnchor).isActive = true
+        }
+        
+        self._headerView.leftAnchor.constraint(equalTo: self._tableView.leftAnchor).isActive = true
+        self._headerView.rightAnchor.constraint(equalTo: self._tableView.rightAnchor).isActive = true
+        self._headerView.topAnchor.constraint(equalTo: self._tableView.topAnchor).isActive = true
+        self._headerView.widthAnchor.constraint(equalTo: self._tableView.widthAnchor).isActive = true
+        
+        self._separatorVerticalView.centerXAnchor.constraint(equalTo: self._headerView.centerXAnchor).isActive = true
+        self._separatorVerticalView.widthAnchor.constraint(equalToConstant: 1.0 / UIScreen.main.scale).isActive = true
+        self._separatorVerticalView.topAnchor.constraint(equalTo: self._headerView.topAnchor).isActive = true
+        self._separatorVerticalView.bottomAnchor.constraint(equalTo: self._headerView.bottomAnchor).isActive = true
+        
+        self._separatorHorizontalView.leftAnchor.constraint(equalTo: self._headerView.leftAnchor).isActive = true
+        self._separatorHorizontalView.rightAnchor.constraint(equalTo: self._headerView.rightAnchor).isActive = true
+        self._separatorHorizontalView.heightAnchor.constraint(equalToConstant: 1.0 / UIScreen.main.scale).isActive = true
+        self._separatorHorizontalView.bottomAnchor.constraint(equalTo: self._headerView.bottomAnchor).isActive = true
+        
     }
     
 }
 
-extension ListViewController {
+extension DetailViewController {
     
     private func _showAlert(with title: String,
                             message: String) {
@@ -191,24 +244,6 @@ extension ListViewController {
         self.present(alertController,
                      animated: true,
                      completion: nil)
-    }
-    
-}
-
-extension ListViewController {
-    
-    private func _didSelect(item: ViewModelType.ModelType) {
-        guard let dataLoader = self._viewModel.dataLoader as? DetailDataLoader,
-            let dataProvider = self._viewModel.dataProvider as? DetailDataProvider
-            else {
-            return
-        }
-        let viewModel = DetailViewModel(dataLoader: dataLoader,
-                                        dataProvider: dataProvider,
-                                        weather: item)
-        let viewController = DetailViewController(viewModel: viewModel)
-        self.navigationController?.pushViewController(viewController,
-                                                      animated: true)
     }
     
 }
