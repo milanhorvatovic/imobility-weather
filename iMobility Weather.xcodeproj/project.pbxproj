@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		27D5913893E75F3F38F93423 /* Pods_iMobility_WeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093AD473ADE27D58FE4A7A3E /* Pods_iMobility_WeatherTests.framework */; };
 		F2825A2CF7E47F55ABB09BA7 /* Pods_iMobility_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5DC21CB07DD7CCCB40CAF4 /* Pods_iMobility_Weather.framework */; };
+		F40E917023AA3F32000A98DC /* ObservableType+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40E916F23AA3F32000A98DC /* ObservableType+Action.swift */; };
 		F417601323A8FEE3006EF781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417601223A8FEE3006EF781 /* AppDelegate.swift */; };
 		F417601523A8FEE3006EF781 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417601423A8FEE3006EF781 /* SceneDelegate.swift */; };
 		F417602A23A8FEE4006EF781 /* iMobility_WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417602923A8FEE4006EF781 /* iMobility_WeatherTests.swift */; };
 		F417603523A8FEE5006EF781 /* iMobility_WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417603423A8FEE5006EF781 /* iMobility_WeatherUITests.swift */; };
+		F44FB9EE23AA238000DEB834 /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FB9ED23AA238000DEB834 /* Predicate.swift */; };
+		F44FB9F023AA238800DEB834 /* SortDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FB9EF23AA238800DEB834 /* SortDescriptor.swift */; };
 		F44FB9F423AA328300DEB834 /* DataLoaderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FB9F323AA328300DEB834 /* DataLoaderMock.swift */; };
 		F4761A1023A9003E0014CF52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4761A0D23A9003E0014CF52 /* Assets.xcassets */; };
 		F4761A1123A9003E0014CF52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4761A0E23A9003E0014CF52 /* LaunchScreen.storyboard */; };
@@ -54,6 +57,7 @@
 		47091B83770A103B77B13E8B /* Pods-iMobility WeatherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMobility WeatherTests.release.xcconfig"; path = "Target Support Files/Pods-iMobility WeatherTests/Pods-iMobility WeatherTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E7ACBCB14DDF7358A81BDFC /* Pods-iMobility Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMobility Weather.debug.xcconfig"; path = "Target Support Files/Pods-iMobility Weather/Pods-iMobility Weather.debug.xcconfig"; sourceTree = "<group>"; };
 		AF5DC21CB07DD7CCCB40CAF4 /* Pods_iMobility_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMobility_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F40E916F23AA3F32000A98DC /* ObservableType+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+Action.swift"; sourceTree = "<group>"; };
 		F417600F23A8FEE3006EF781 /* iMobility Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iMobility Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F417601223A8FEE3006EF781 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F417601423A8FEE3006EF781 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 		F417603023A8FEE5006EF781 /* iMobility WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iMobility WeatherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F417603423A8FEE5006EF781 /* iMobility_WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMobility_WeatherUITests.swift; sourceTree = "<group>"; };
 		F417603623A8FEE5006EF781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F44FB9ED23AA238000DEB834 /* Predicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predicate.swift; sourceTree = "<group>"; };
+		F44FB9EF23AA238800DEB834 /* SortDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortDescriptor.swift; sourceTree = "<group>"; };
 		F44FB9F323AA328300DEB834 /* DataLoaderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoaderMock.swift; sourceTree = "<group>"; };
 		F4761A0D23A9003E0014CF52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4761A0F23A9003E0014CF52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -153,6 +159,7 @@
 		F417601123A8FEE3006EF781 /* iMobility Weather */ = {
 			isa = PBXGroup;
 			children = (
+				F44FB9EC23AA238000DEB834 /* Foundation */,
 				F417604223A8FF1C006EF781 /* Application */,
 				F4761A1223A90F270014CF52 /* Model */,
 				F4761A2B23A91B5E0014CF52 /* Services */,
@@ -205,6 +212,16 @@
 				F417602023A8FEE4006EF781 /* Info.plist */,
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		F44FB9EC23AA238000DEB834 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				F44FB9ED23AA238000DEB834 /* Predicate.swift */,
+				F44FB9EF23AA238800DEB834 /* SortDescriptor.swift */,
+				F40E916F23AA3F32000A98DC /* ObservableType+Action.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 		F4761A0C23A9003E0014CF52 /* Resources */ = {
@@ -509,12 +526,15 @@
 				F4761A1E23A90F660014CF52 /* Model.swift in Sources */,
 				F417601323A8FEE3006EF781 /* AppDelegate.swift in Sources */,
 				F4761A1523A90F270014CF52 /* Error.swift in Sources */,
+				F40E917023AA3F32000A98DC /* ObservableType+Action.swift in Sources */,
 				F417601523A8FEE3006EF781 /* SceneDelegate.swift in Sources */,
 				F4761A2223A9101E0014CF52 /* ModelServiceWeatherList.swift in Sources */,
 				F4761A2423A910660014CF52 /* ModelServiceCommon.swift in Sources */,
+				F44FB9EE23AA238000DEB834 /* Predicate.swift in Sources */,
 				F4761A2023A910100014CF52 /* ModelServiceWeather.swift in Sources */,
 				F4761A2F23A91FBE0014CF52 /* DataLoader.swift in Sources */,
 				F4761A1B23A90F660014CF52 /* ModelService.swift in Sources */,
+				F44FB9F023AA238800DEB834 /* SortDescriptor.swift in Sources */,
 				F4761A2A23A91ABC0014CF52 /* ModelServiceForecastList.swift in Sources */,
 				F4761A2823A91A5D0014CF52 /* ModelServiceForecast.swift in Sources */,
 			);
