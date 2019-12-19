@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		27D5913893E75F3F38F93423 /* Pods_iMobility_WeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093AD473ADE27D58FE4A7A3E /* Pods_iMobility_WeatherTests.framework */; };
-		3E0097BA23AAF020002CD9A3 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0097B923AAF020002CD9A3 /* UIColor.swift */; };
 		3E0097AE23AA696B002CD9A3 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0097AD23AA696B002CD9A3 /* DetailModel.swift */; };
 		3E0097B023AA8BDC002CD9A3 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0097AF23AA8BDC002CD9A3 /* DetailViewModel.swift */; };
 		3E0097B223AABC60002CD9A3 /* DetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0097B123AABC60002CD9A3 /* DetailHeaderView.swift */; };
 		3E0097B423AABC67002CD9A3 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0097B323AABC67002CD9A3 /* DetailCell.swift */; };
 		3E0097B623AABC74002CD9A3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0097B523AABC74002CD9A3 /* DetailViewController.swift */; };
+		3E0097BA23AAF020002CD9A3 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0097B923AAF020002CD9A3 /* UIColor.swift */; };
 		F2825A2CF7E47F55ABB09BA7 /* Pods_iMobility_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5DC21CB07DD7CCCB40CAF4 /* Pods_iMobility_Weather.framework */; };
+		F405D19923AB1B5E00FE3DE6 /* ApplicationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405D19823AB1B5E00FE3DE6 /* ApplicationFactory.swift */; };
 		F40E917023AA3F32000A98DC /* ObservableType+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40E916F23AA3F32000A98DC /* ObservableType+Action.swift */; };
 		F417601323A8FEE3006EF781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417601223A8FEE3006EF781 /* AppDelegate.swift */; };
 		F417601523A8FEE3006EF781 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417601423A8FEE3006EF781 /* SceneDelegate.swift */; };
@@ -70,15 +71,16 @@
 		093AD473ADE27D58FE4A7A3E /* Pods_iMobility_WeatherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMobility_WeatherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CF989E8C23A2B5E95547DFA /* Pods-iMobility Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMobility Weather.release.xcconfig"; path = "Target Support Files/Pods-iMobility Weather/Pods-iMobility Weather.release.xcconfig"; sourceTree = "<group>"; };
 		2204E90B43D4115523E7ABFD /* Pods-iMobility WeatherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMobility WeatherTests.debug.xcconfig"; path = "Target Support Files/Pods-iMobility WeatherTests/Pods-iMobility WeatherTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3E0097B923AAF020002CD9A3 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		3E0097AD23AA696B002CD9A3 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		3E0097AF23AA8BDC002CD9A3 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		3E0097B123AABC60002CD9A3 /* DetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderView.swift; sourceTree = "<group>"; };
 		3E0097B323AABC67002CD9A3 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		3E0097B523AABC74002CD9A3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3E0097B923AAF020002CD9A3 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		47091B83770A103B77B13E8B /* Pods-iMobility WeatherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMobility WeatherTests.release.xcconfig"; path = "Target Support Files/Pods-iMobility WeatherTests/Pods-iMobility WeatherTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E7ACBCB14DDF7358A81BDFC /* Pods-iMobility Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMobility Weather.debug.xcconfig"; path = "Target Support Files/Pods-iMobility Weather/Pods-iMobility Weather.debug.xcconfig"; sourceTree = "<group>"; };
 		AF5DC21CB07DD7CCCB40CAF4 /* Pods_iMobility_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMobility_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F405D19823AB1B5E00FE3DE6 /* ApplicationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationFactory.swift; sourceTree = "<group>"; };
 		F40E916F23AA3F32000A98DC /* ObservableType+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+Action.swift"; sourceTree = "<group>"; };
 		F417600F23A8FEE3006EF781 /* iMobility Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iMobility Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F417601223A8FEE3006EF781 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 			children = (
 				F417601223A8FEE3006EF781 /* AppDelegate.swift */,
 				F417601423A8FEE3006EF781 /* SceneDelegate.swift */,
+				F405D19823AB1B5E00FE3DE6 /* ApplicationFactory.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				F417601523A8FEE3006EF781 /* SceneDelegate.swift in Sources */,
 				F4761A2223A9101E0014CF52 /* ModelServiceWeatherList.swift in Sources */,
 				F4761A2423A910660014CF52 /* ModelServiceCommon.swift in Sources */,
+				F405D19923AB1B5E00FE3DE6 /* ApplicationFactory.swift in Sources */,
 				3E0097B623AABC74002CD9A3 /* DetailViewController.swift in Sources */,
 				3E0097B023AA8BDC002CD9A3 /* DetailViewModel.swift in Sources */,
 				F44FB9E723AA210600DEB834 /* ModelContent.swift in Sources */,
